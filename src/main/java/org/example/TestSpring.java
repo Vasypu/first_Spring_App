@@ -13,6 +13,9 @@ public class TestSpring {
         System.out.println(musicPlayer.getName());
         System.out.println(musicPlayer.getValue());
 
+        JazzMusic jazzMusic = context.getBean("musicBeanJazz", JazzMusic.class);
+        System.out.println(jazzMusic.getSong());
+
         context.close();
     }
 }

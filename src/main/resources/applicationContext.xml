@@ -18,7 +18,11 @@
     </bean>
 
     <bean id="musicBeanJazz"
-          class="org.example.JazzMusic">
+          class="org.example.JazzMusic"
+            init-method="doMyInit"
+            scope="prototype"
+            destroy-method="doMyDestroy"
+    factory-method="getJazzMusic">
     </bean>
 
     <bean id="musicPlayer"
