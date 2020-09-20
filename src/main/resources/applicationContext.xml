@@ -20,7 +20,7 @@
     <bean id="musicBeanJazz"
           class="org.example.JazzMusic"
             init-method="doMyInit"
-            scope="prototype"
+            scope="singleton"
             destroy-method="doMyDestroy"
     factory-method="getJazzMusic">
     </bean>
