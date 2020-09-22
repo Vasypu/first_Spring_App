@@ -4,6 +4,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class JazzMusic implements Music {
+    @Override
+    public void getSong() {
+
+    }
 
 //    private JazzMusic () {}
 
@@ -19,6 +23,4 @@ public class JazzMusic implements Music {
 //        System.out.println("Doing destroy method");
 //    }
 
-    @Override
-    public String getSong() { return "New music"; }
 }
