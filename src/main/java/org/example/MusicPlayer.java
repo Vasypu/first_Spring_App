@@ -23,17 +23,17 @@ public class MusicPlayer {
 //    @Qualifier("classicalMusic")
     private Music music1;
     private Music music2;
-    @Autowired
-    private ClassicalMusic classicalMusic;
-    @Autowired
-    private RockMusic rockMusic;
+//    @Autowired
+//    private ClassicalMusic classicalMusic;
+//    @Autowired
+//    private RockMusic rockMusic;
 
 //    @Autowired
-//    public void setMusic(@Qualifier("classicalMusic") Music classicalMusic,
-//                         @Qualifier("jazzMusic") JazzMusic jazzMusic) {
-//        this.music1 = classicalMusic;
-//        this.music2 = jazzMusic;
-//    }
+    public MusicPlayer(@Qualifier("classicalMusic") Music classicalMusic,
+                         @Qualifier("jazzMusic") JazzMusic jazzMusic) {
+        this.music1 = classicalMusic;
+        this.music2 = jazzMusic;
+    }
 
 //    public String playMusic () {
 //        return "Playing " + classicalMusic.getSong() + " " + jazzMusic.getSong();
@@ -41,7 +41,7 @@ public class MusicPlayer {
 //    }
 
     public void playMusic () {
-        classicalMusic.getSong();
-        rockMusic.getSong();
+        music1.getSong();
+        music2.getSong();
     }
 }
