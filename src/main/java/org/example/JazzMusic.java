@@ -2,12 +2,15 @@ package org.example;
 
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Component
 public class JazzMusic implements Music {
-    @Override
-    public void getSong() {
 
-    }
+    List<String> songs = Arrays.asList("Rsdf", "asfdsd", "jadsadkj");
+    @Override
+    public void getSong() { songs.forEach(System.out::println); }
 
 //    private JazzMusic () {}
 
